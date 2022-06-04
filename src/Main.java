@@ -1,12 +1,11 @@
-import java.sql.SQLOutput;
-
 public class Main {
     public static void main(String[] args) {
+        BonusMilesService service = new BonusMilesService();
 
-        int check = 905;
-        int bonus = check / 20;
+        int cost = 10_000;
+        int miles = service.calculate(cost);
 
-        System.out.println("milli:" + bonus);
-        }
+        System.out.println(miles);
+    }
 
 }
